@@ -6,26 +6,26 @@ pipeline {
         
         stage('Example clean') {
             steps { 
-                sh "mvn clean kouami-app" 
+                sh "mvn clean " 
             } 
             
         } 
 
         stage('Example install') { 
             steps { 
-                sh "mvn install kouami-app" 
+                sh "mvn install" 
             }
         }
 
         stage('Example test') { 
             steps { 
-                sh "mvn test kouami-app" 
+                sh "mvn test" 
             }        
         } 
         
         stage('Example package') {
             steps { 
-                sh mvn package kouami-app" 
+                sh "mvn package" 
             }
         }
     }  
